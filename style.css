@@ -31,7 +31,7 @@ body {
     display: block;
     background: var(--bg-color);
     color: var(--text-color);
-    background-image: url('./img/sky-img.png');
+    background-image: url('sky-img.png');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
