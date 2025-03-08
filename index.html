@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Plast</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Delius+Swash+Caps&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Kablammo&family=Lobster&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Mega Plast</div>
+        <button class='bx bx-menu' id="menu-icon"></button>
+
+        <nav class="navbar">
+            <a href="#" class="navbar-element">О НАС</a>
+            <a href="#" class="navbar-element">РЕЖИМ РАБОТЫ</a>
+            <a href="#" class="navbar-element">ОСТАВИТЬ ЗАЯВКУ</a>
+            <a href="#" class="navbar-element">КОНТАКТЫ</a>
+        </nav>
+            
+            <div class="contacts">
+ 
+                <img src="./img/icon-1.png" class="icon">         
+                <a href="mailto:MegaPlast@mail.com" class="contacts-element" id="contacts">MegaPlast@mail.com</a>
+
+                <img src="./img/icon-2.png" alt="" class="icon">            
+                <a href="tel:+77003964515" class="contacts-element" id="tel">+7 700 396 45 15</a>
+            </div>
+    </header>
+
+
+    <section class="main">
+        <div class="main-text">
+            <h1><span class="green">ПЕНОПЛАСТ</span> </h1>
+            <h1>ОТ ЗАВОДА-ИЗГОТОВИТЕЛЯ</h1>
+            <p id="space">Низкие цены при высоком </p>
+            <p>качестве изделий</p>
+        </div>
+
+        <div class="main-img">
+            <img src="./img/home-img.png" alt="img">
+        </div>  
+
+        <div class="form-container">
+            <h2>Оставить заявку</h2>
+
+            <form>
+                <input type="text" name="name" id="user-name" placeholder="Ваше имя" required>
+                <input type="tel" name="user-phone" id="user-phone" placeholder="Телефон *" required>
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                    <p class="text">Даю согласие на<span class="color-green"> обработку персональных данных</span></p>
+                </label>
+
+                <button type="submit" class="btn">ОТПРАВИТЬ</button>
+                
+            </form>
+            <div id="notification" class="hidden">Сообщение успешно отправлено!</div>
+        </div>
+    </section>
+
+
+
+    <section class="products">
+        <p class="products-text">ПРОДУКТЫ <span id="dash">   ──  </span><span>Большой ассортимент под разные задачи </span></p>
+ 
+            <div class="products-grid">
+                <div class="product-item">
+                    <img class="product-card" src="./img/001.png" alt=""> 
+                    <div class="product-label">БЛОКИ</div>
+                </div>
+                <div class="product-item">
+                    <img class="product-card" src="./img/002.png" alt=""> 
+                    <div class="product-label">Листы</div>
+                </div>
+                <div class="product-item">
+                    <img class="product-card" src="./img/003.png" alt=""> 
+                    <div class="product-label">Теплые полы</div>
+                </div>
+
+                <div class="product-item">
+                    <img class="product-card" src="./img/004.png" alt=""> 
+                    <div class="product-label">Теплые стены</div>
+                </div>
+                <div class="product-item">
+                    <img class="product-card" src="./img/005.png" alt=""> 
+                    <div class="product-label">Декоративные элементы</div>
+                </div>
+                <div class="product-item">
+                    <img class="product-card" src="./img/006.png" alt=""> 
+                    <div class="product-label">Упаковочные изделия</div>
+                </div>
+
+             </div>
+        <button class="btn">Показать все</button>
+    </section>
+
+
+<script src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,641 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Roboto Condensed", sans-serif
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #000;
+    --main-color: #62965A;
+}
+
+html {
+    display: block;
+    box-sizing: border-box;
+    font-size: 60%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-weight: 400;
+    display: block;
+    background: var(--bg-color);
+    color: var(--text-color);
+    background-image: url('./img/sky-img.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    background-attachment: scroll;
+    overflow-x: hidden;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3.51vh;
+    padding: 0 10.764vw; 
+    width: 100%;
+    z-index: 5;
+}
+
+
+.logo {
+    font-family: "Istok Web";
+    font-weight: 700;
+    font-size: 2.5vw;
+    width: 7.38vw;
+
+    color: var(--text-color);
+    cursor: pointer; 
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    gap: 2%;
+
+    width: 33.28vw;
+    height: 1.73vh;
+
+    margin-left: auto;
+    margin-right: 6.4vw;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+#menu-icon {
+    display: none;
+    position: relative;
+    border: none;
+    background: transparent;
+    font-size: 5vw;
+    cursor: pointer;
+  }
+
+.navbar-element {
+    font-size: 1.15vw;
+}
+
+.contacts {
+    width: 25.376vw;
+    height: 1.77vh;
+    top: 0.37vh;
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    font-size: 1.15vw;
+    gap: auto;
+}
+
+.contacts-element {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.icon {
+    width: 1.66vw;
+    height: auto;
+}
+
+#contacts {
+    margin-right: 2.6vw;
+    margin-left: 0.78vw;
+}
+
+#tel {
+    height: 100%;
+    margin-left: 0.78vw;
+}
+
+
+section {
+    margin-top: 12.12vh;
+    padding: 0;
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: 29.12vw 1fr auto;
+
+        
+    position: relative;
+    align-items: center;
+    margin-top: 6.24vh;
+    margin-bottom: 3.64vh;
+    padding: 0 10.764vw; 
+    width: 100%;
+    
+}
+
+.main-text {
+    padding-bottom: 7.3vh;
+}
+
+.main-text h1 {
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    font-size: 3.9vw;
+    letter-spacing: 0%;
+}
+  
+.green {
+    color: #4F8A10;
+}
+  
+.main-text p {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.25vw;
+    letter-spacing: 0%;
+}
+
+#space {
+    padding-top: 2.7vh;
+}   
+
+.main-img {
+    position: relative;
+    display: inline-block;
+    justify-content: center; 
+} 
+
+.main-img img{
+    position: absolute;
+    width: 39.6vw;
+    height: auto;
+    top: -25vh; 
+    left: -30%; 
+    right: 0; 
+    margin: auto;
+    z-index: 2;
+}
+
+
+
+.form-container {
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    align-self: start; 
+
+    
+    width: 20.33vw;
+    height: 19.17vh;
+    min-height: 100%;
+    background: transparent;
+    border-left: 0.1vw solid #DADADA;
+    padding-left: 3.17vw; 
+    margin-bottom: 12.85vh;
+    
+}
+
+.form-container h2 {
+    margin-bottom: 3.24vh;
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    font-size: 1.87vw;
+    letter-spacing: 0%;
+}
+
+.form-container form input {
+    width: 100%;
+    height: 6.48vh;
+    padding: 1.06vw;
+    margin-bottom: 1.08vh;
+    border: 0.05vw solid #DADADA;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 0.9vw;
+    letter-spacing: 0%;
+} 
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    cursor: pointer;
+    margin-top: 1.3vh;
+    margin-bottom: 1.56vh;
+    user-select: none;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    width: 10%;
+    height: 2.9vh;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.04vw;
+    transition: background-color 0.3s;
+}
+
+.checkmark::after {
+    content: "✔";
+    color: white;
+    font-size: 1.04vw;
+    display: none;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+    display: block;
+}
+
+
+.text {
+    font-weight: 300;
+    font-size: 0.73vw;
+    line-height: 2.08vh;
+    letter-spacing: auto;
+    font-family: Roboto;
+}
+
+.color-green {
+    color: var(--main-color);
+    font-weight: 300;
+    font-size: 0.73vw;
+    line-height: 2.08vh;
+    letter-spacing: auto;
+    font-family: Roboto;
+}
+
+
+.btn {
+    background: var(--main-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0 5.7vw;
+    gap: 0.52vh;
+
+    font-family: Roboto Condensed;
+    font-weight: 400;
+    font-size: 1.14vw;
+    line-height: 1.7vh;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+.form-container button {
+    width: 100%;
+    height: 6.48vh;    
+}
+
+.form-container button:hover {
+    background: #2F6034;
+}
+
+
+
+#notification {
+    position: absolute;
+    top: 100%;             
+    right: 0;   
+    width: 85%;
+    height: 6.48vh;
+
+    margin-top: 0.5vh; 
+    margin-left: 3.1vw; 
+
+    background-color: var(--main-color);
+    border: 5px solid transparent;
+    color: var(--bg-color);
+
+    padding: 0 1.5vw;
+    gap: 0.52vh;
+
+    font-family: "Roboto Condensed";
+    font-weight: 400;
+    font-size: 0.84vw;
+    line-height: 1.7vh;
+    letter-spacing: 0%;
+
+    opacity: 0; 
+    transition: opacity 0.5 ease-in-out;
+
+    display: flex;
+    justify-content: center;                                                                                                                                                                                                                                                                                                                       ;
+    align-items: center;
+}
+
+#notification.show {
+    opacity: 1;
+}
+
+#notification.hide {
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/* секция продукты */
+
+.products {
+    padding: 0 10.764vw; 
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.56vw;
+} 
+
+
+.product-item {
+    position: relative; 
+    overflow: hidden;
+}
+
+.product-card {
+    display: block;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    max-width: 100%;
+    width: 100%;;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.product-label {
+    position: absolute;
+    bottom: 2.08vh; 
+    left: 2.04vh; 
+    background: white;
+    color: black;
+    font-weight: bold;
+    padding: 2.2vh 1.04vh;
+    font-size: 1.04vw;
+    height: 6.16vh;
+
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    line-height: 3.62vh;
+    letter-spacing: 2%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+    white-space: nowrap;
+}
+
+.products-text {
+    font-size: 2.6vw;
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    line-height: 3.24vh;
+    letter-spacing: 2%;
+    margin-bottom: 7.56vh;
+    display: flex;
+    justify-content: left;                                                                                                                                                                                                                                                                                                                       ;
+    align-items: center;
+}
+
+.products-text span {
+    color: #868686;
+    font-size: 1.04vw;
+    font-family: Roboto;
+    font-weight: 300;
+    line-height: 1.62vh;
+    letter-spacing: 0%;
+    width: 20.28vw;
+    height: 1.62vh;
+    margin-left:  1.53vw;
+}
+
+#dash {
+    opacity: 20%;
+    margin-left:  1.53vw;
+    width: 1.87vw;
+    display: flex;
+    align-items: center;
+}
+
+.products button {
+    width: 12.43vw;
+    height: 6.48vh;   
+    margin: 6.6vh auto 13.86vh auto;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+    width: 1.04vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(60, 114, 83);
+    box-shadow: 0 0 2.6vw var(--main-color); 
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+    border-radius: 0.52vw;
+    width: 2.6vw;
+}
+
+
+
+@media screen and (max-width: 991px) {
+    .navbar{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        display: none; 
+        z-index: 9999; 
+    }
+
+    #menu-icon {
+        display: block;
+        z-index: 10000; 
+        cursor: pointer;
+        color: #000;
+    }
+
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        align-items: center;
+        padding: 0.8vh 5vw;
+        margin-bottom: auto;
+        gap: auto;
+    }
+    
+
+    .logo {
+         text-align: left;
+         font-size: 3.5vw;
+    }
+    
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0; 
+        color: var(--text-color);
+    }
+
+    .navbar-element {
+        font-size: 3vw;
+    }
+    
+    .contacts {
+        flex-direction: row;
+        gap: 5px;
+        width: 100%;
+        font-size: 3vw;
+    }
+    
+    .icon {
+        width: 5vw;
+    }
+    
+    .main {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 0 5vw;
+    }
+    
+        .main-text h1 {
+            font-size: 10vw;
+            text-align: center;
+        }
+    
+        .main-text p {
+            font-size: 4vw;
+        }
+    
+        .main-img img {
+            position: static;
+            width: 70%;
+            margin: 1vw auto;
+        }
+    
+    
+        .form-container {
+            width: 100%;
+            border-left: none;
+            padding-left: 0;
+            text-align: center;
+        }
+    
+        .form-container h2 {
+            font-size: 4vw;
+        }
+    
+        .form-container form input {
+            font-size: 3vw;
+        }
+    
+        .custom-checkbox {
+            justify-content: center;
+        }
+    
+        .checkmark {
+            width: 5vw;
+        }
+        .checkmark::after {
+            content: "✔";
+            color: white;
+            font-size: 3.04vw;
+            display: none;
+        }
+        
+        .text, .color-green{
+            font-size: 2.5vw;
+        }
+    
+        .btn {
+            font-size: 3vw;
+            padding: 3vw;
+        }
+
+        #notification {
+            width: 100%;
+            font-size: 2.4vw;
+            margin-top: 3.1vh;
+        }
+    
+        .products {
+            padding: 0 5vw;
+        }
+    
+        .products-grid {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3vw;
+        }
+    
+        .products-text {
+            font-size: 5vw;
+            text-align: center;
+            flex-direction: column;
+        }
+    
+        .products-text span {
+            padding-top: 2vh;
+            font-size: 3vw;
+            width: auto;
+        }
+    
+        #dash {
+            display: none;
+        }
+        .product-label {
+            font-size: 2.5vw;
+        }
+    
+        .products button {
+            width: 50%;
+            font-size: 3vw;
+        }
+    }
+    
